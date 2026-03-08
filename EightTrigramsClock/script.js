@@ -70,37 +70,37 @@ const ringsConfig = [
     id: "month",
     type: "time",
     data: Array.from({ length: 12 }, (_, i) => toChineseNum(i + 1) + "月"),
-    radius: 18,
+    radius: 19,
   },
   {
     id: "day",
     type: "time",
     data: Array.from({ length: 31 }, (_, i) => toChineseNum(i + 1) + "号"),
-    radius: 26,
+    radius: 28,
   },
   {
     id: "week",
     type: "time",
     data: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
-    radius: 37,
+    radius: 40,
   },
   {
     id: "hour",
     type: "time",
     data: Array.from({ length: 24 }, (_, i) => toChineseNum(i) + "点"),
-    radius: 43,
+    radius: 46,
   },
   {
     id: "minute",
     type: "time",
     data: Array.from({ length: 60 }, (_, i) => toChineseNum(i) + "分"),
-    radius: 54,
+    radius: 57,
   },
   {
     id: "second",
     type: "second",
     data: Array.from({ length: 60 }, (_, i) => toChineseNum(i) + "秒"),
-    radius: 65,
+    radius: 68,
   },
 ];
 
@@ -161,7 +161,7 @@ function initRings() {
 }
 
 function update() {
-  const now = new Date("2026-12-31 23:59:59");
+  const now = new Date();
   const hour = now.getHours();
 
   // 背景高亮更新 (使用缓存)
