@@ -63,20 +63,20 @@ const ringsConfig = [
     id: "zodiac",
     type: "zodiac",
     data: shengxiao.map((s) => s + "年"),
-    radius: 8,
+    radius: 6,
   },
-  { id: "jieqi", type: "jieqi", data: jieqi, radius: 14 },
+  { id: "jieqi", type: "jieqi", data: jieqi, radius: 12 },
   {
     id: "month",
     type: "time",
     data: Array.from({ length: 12 }, (_, i) => toChineseNum(i + 1) + "月"),
-    radius: 21,
+    radius: 18,
   },
   {
     id: "day",
     type: "time",
     data: Array.from({ length: 31 }, (_, i) => toChineseNum(i + 1) + "号"),
-    radius: 29,
+    radius: 26,
   },
   {
     id: "week",
@@ -88,7 +88,7 @@ const ringsConfig = [
     id: "hour",
     type: "time",
     data: Array.from({ length: 24 }, (_, i) => toChineseNum(i) + "点"),
-    radius: 45,
+    radius: 43,
   },
   {
     id: "minute",
@@ -100,7 +100,7 @@ const ringsConfig = [
     id: "second",
     type: "second",
     data: Array.from({ length: 60 }, (_, i) => toChineseNum(i) + "秒"),
-    radius: 64,
+    radius: 65,
   },
 ];
 
@@ -161,7 +161,7 @@ function initRings() {
 }
 
 function update() {
-  const now = new Date();
+  const now = new Date("2026-12-31 23:59:59");
   const hour = now.getHours();
 
   // 背景高亮更新 (使用缓存)
